@@ -1,0 +1,123 @@
+##| Legend of Zelda
+use_bpm 175
+
+q = 0.5
+w = 1
+wq = 1.5
+y = 2
+p = 3
+melody = [:D4,:F4,:D5,:D4,:F4,:D5,
+          :E5,:F5,:E5,:F5,:E5,:C5,:A4,
+          :A4,:D4,:F4,:G4,:A4,
+          :A4,:D4,:F4,:G4,:E4]
+times = [q,q,w+w,q,q,w+w,
+         w+q,q,q,q,q,q,w+w,
+         w,w,q,q,p,
+         w,w,q,q,p]
+
+in_thread(name: :righthand) do
+  use_synth :piano
+  2.times do
+    2.times do
+      
+      sleep w
+      2.times do
+        play_chord [:D4,:F4,:A4]
+        sleep w
+      end
+      
+      sleep q
+      play :E4
+      sleep q
+      play_chord [:G4,:B4], release: wq
+      sleep y
+      
+      sleep w
+      2.times do
+        play_chord [:F4,:A4,:C5]
+        sleep w
+      end
+      
+      sleep q
+      play :E4
+      sleep q
+      play_chord [:G4,:B4], release: w+q
+      sleep y
+      
+    end
+    2.times do
+      play_pattern_timed melody, times, amp: 2
+    end
+  end
+end
+
+in_thread(name: :lefthand) do
+  use_synth :piano
+  2.times do
+    2.times do
+      play_pattern_timed [:D3, :E3, :F3, :e3], [p]
+    end
+    
+    2.times do
+      
+      play :D3
+      sleep w
+      2.times do
+        play_chord [:F3,:A3]
+        sleep w
+      end
+      sleep w
+      
+      play :E3
+      sleep w
+      2.times do
+        play_chord [:G3,:B3]
+        sleep w
+      end
+      
+      play :F3
+      sleep w
+      play_chord [:A3,:C4]
+      sleep w
+      
+      
+      play :E3
+      sleep w
+      2.times do
+        play [:G3,:B3]
+        sleep w
+      end
+      
+      play :Bb2
+      sleep w
+      2.times do
+        play_chord [:D3,:F3]
+        sleep w
+      end
+      
+      play :F2
+      sleep w
+      2.times do
+        play_chord [:A2,:C3]
+        sleep w
+      end
+      
+      
+      play :Bb2
+      sleep w
+      2.times do
+        play_chord [:D3,:F3]
+        sleep w
+      end
+      
+      play :A2
+      sleep w
+      2.times do
+        play_chord [:Db3, :E3]
+        sleep w
+      end
+      
+    end
+  end
+end
+
