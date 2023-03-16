@@ -1,11 +1,34 @@
-# SonicPi
-<sub> -Status: Incomplete </sub>
-<sub> Last update: 2/15/2023 </sub>
-<sub> Developers: Annie Hwang </sub>
+# SonicPi - Song Covers
 
-### Description
-SonicPi is a live coding music app where you can create, write, or modify music. I was able to work on this app as an independent interest project during classtime. Data and programming structures that I personally used in my code were loops, variables, threads, thread synchonisation, and chords. 
+<p align="center">
+  <img src="https://sonic-pi.net/media/images/home/logo.png" width=50% height=50%>
+</p>
+
+## Table of Contents
+* [Technologies Used](#tech)
+* [Description](#desc)
+* [Installation Requirements](#install)
+* [Basic Tutorial](#tutorial)
+
+<a name="tech"></a>
+## Technologies Used
+- Ruby 
+
+<a name="desc"></a>
+## Description
+SonicPi is a code-based music creation and performance tool. My love for music, and addiction with OST's has influenced me to choose Sonic Pi as my independent interest project. Although I love music, I have trouble making original songs, so I've made a cover of a song that I like :)
+
+<a name="install"></a>
+## Installation Requirements
+1. Lets start off by downloading Sonic Pi. You can download Sonic Pi by visiting  [Sonic-pi.net](https://sonic-pi.net/). Sonic Pi is available to you through Windows, macOS, or Raspberry Pi OS!
+2. More information regarding prerequisites can be discovered on their [GitHub](https://github.com/sonic-pi-net/sonic-pi). 
+
+<a name="tutorial"></a>
+## Basic Tutorial on Sonic Pi
+- Sonic Pi uses data and programming structures such as loops, variables, conditionals, and threads. Therefore, it's important to be familiar with the fundamentals of Ruby. Musical structures that may benefit you are synthesizers, chords, melodies, and scales. 
+- You can find a more detailed tutorial on how Sonic Pi works [here](https://sonic-pi.net/tutorial.html#section-2)!
 
 
-![Screen Shot 2023-02-15 at 4 17 47 PM](https://user-images.githubusercontent.com/122137345/219168316-43cd7703-c742-471c-a67f-93ab18bc4021.png)
-![Screen Shot 2023-02-15 at 4 18 10 PM](https://user-images.githubusercontent.com/122137345/219168364-f31e5be6-0519-4294-876d-bef2bca5cea9.png)
+##### Developers: Annie Hwang
+##### Project Status: Completed
+##### Last update: 2/15/2023
