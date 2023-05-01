@@ -1,0 +1,83 @@
+##| Status: Incomplete
+
+##| Seven Deadly Sins - Opening OST
+
+use_bpm 152
+
+q = 0.3
+x = 0.4
+t = 0.5
+p = 0.6
+w = 0.7
+l = 0.8
+v = 0.9
+r = 1
+
+#melody
+melody = [:B4,:Cs5,:D5,:E5,:Fs5,nil,:Fs5,:B5,:A5,:B5,:E5,:G5,:Fs5,nil,
+          :E5,:Fs5,:G5,:Fs5,:E5,:D5,:Cs5, nil,
+          :D5,:E5,:Fs5,:e5,:d5,:Cs5,:B4, nil,
+          :B4,:A4,:G4,:A4,:B4,
+          :G5,:Fs5,:E5,:D5,:Cs5]
+#melody times
+times = [r,r,r,r,r,r,r,r,r,r,r,r,
+         p,t,t,t,t,t,t,t,
+         p,t,t,t,t,t,t,t,
+         p,x,p,w,l,w,
+         p,w,l,v,r]
+
+
+
+use_synth :piano
+play_pattern_timed [:As5,:G5,:Fs5,:E5,:Fs5,:E5,:D5,:Cs5],
+  [q]
+2.times do
+  play_pattern_timed melody, times
+end
+
+play_chord [:B4]
+sleep t
+play_pattern_timed [:B4,:A4], [t]
+play_chord [:G4,:D4]
+sleep v
+play_pattern_timed [:A4,:B4], [t]
+sleep r
+play_chord [:G5,:B4]
+sleep p
+play_chord [:Cs5,:Fs5]
+sleep v
+play_pattern_timed [:As5,:Fs5,:B5], [t]
+2.times do
+  play_chord [:B4,:Fs4,:D4]
+  sleep r
+end
+play_chord [:B4], amp: 2
+sleep t
+
+play_chord [:Cs5]
+sleep p
+play_chord [:B4,:G4,:D5]
+sleep t
+play_pattern_timed [:E5,:Cs5,:D5], [t]
+play_chord [:B4,:G4,:E5]
+sleep x
+play_chord [:Fs4,:Fs5]
+sleep p
+play_chord [:D4,:D5]
+sleep t
+play_chord [:E4,:E5]
+sleep t
+play_chord [:Fs4,:Fs5]
+sleep p
+play_chord [:G4,:G5]
+sleep w
+play_chord [:A4,:A5]
+sleep l
+play_chord [:Cs5,:Cs6]
+sleep v
+play_chord [:B4,:B5]
+
+
+
+
+
